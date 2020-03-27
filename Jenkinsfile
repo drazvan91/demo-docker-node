@@ -13,6 +13,13 @@ pipeline {
             }
         }
 
+        stage("Initial stage") {
+            steps {
+                echo "hello there"
+                cat /etc/docker/daemon.json
+            }
+        }
+
         stage("Build image") {
             steps {
                 script {

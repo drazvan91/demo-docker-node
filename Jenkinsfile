@@ -15,8 +15,9 @@ pipeline {
 
         stage("Initial stage") {
             steps {
-                echo "hello there"
-                cat /etc/docker/daemon.json
+                script {
+                    cat /etc/docker/daemon.json
+                }
             }
         }
 

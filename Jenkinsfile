@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        registry = "192.168.1.108:5000/otherweb"
+        registry = "10.98.218.13/otherweb"
         dockerImage = ""
     }
 
@@ -10,14 +10,6 @@ pipeline {
         stage("Checkout Source") {
             steps {
                 git "https://github.com/drazvan91/demo-docker-node.git"
-            }
-        }
-
-        stage("Initial stage") {
-            steps {
-                script {
-                    cat /etc/docker/daemon.json
-                }
             }
         }
 
